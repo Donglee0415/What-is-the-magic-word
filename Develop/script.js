@@ -44,7 +44,7 @@ generateBtn.addEventListener("click", function(){
         //create if statements with for loops
         if ((genCharacter === true) && (genNumeric === true) && (genLowerCase === true) && (genUpperCase === true)) {
           for (i = 0; i < charLength; i++) {
-              let character = Math.floor(Math.random() * allCharacters.length);
+              let character = Math.floor(Math.random() * allCharacters.length);//which combination use
               Password += allCharacters.charAt(character, character + 1);
           }
       }
@@ -54,8 +54,8 @@ generateBtn.addEventListener("click", function(){
               Password += a.charAt(character, character + 1);
           }
       }
-      else if ((getCharacter === true) && (genNumeric === true) && (genLowerCase === false) && (genUpperCase === true)) {
-          for (i = 0; i < charLength; i++) {
+      else if ((genCharacter === true) && (genNumeric === true) && (genLowerCase === false) && (genUpperCase === true)) {
+          for (i = 0; i < charLength; i ++) {
               let character = Math.floor(Math.random() * b.length);
               Password += b.charAt(character, character + 1);
           }
@@ -108,24 +108,28 @@ generateBtn.addEventListener("click", function(){
               Password += k.charAt(character, character + 1);
           }
       }
+      //user want only characters for password
       else if ((genCharacter === true) && (genNumeric === false) && (genLowerCase === false) && (genUpperCase === false)) {
           for (i = 0; i < charLength; i++) {
-              let character = Math.floor(Math.random() * symbols.length);
+              let character = Math.floor(Math.random() * character1.length);
               Password += character1.charAt(character, character + 1);
           }
       }
+      //user want only numbers for password
       else if ((genCharacter === false) && (genNumeric === true) && (genLowerCase === false) && (genUpperCase === false)) {
           for (i = 0; i < charLength; i++) {
-              let character = Math.floor(Math.random() * numbers.length);
+              let character = Math.floor(Math.random() * numeric.length);
               Password += numeric.charAt(character, character + 1);
           }
       }
+      //user want only lowercases for password
       else if ((genCharacter === false) && (genNumeric === false) && (genLowerCase === true) && (genUpperCase === false)) {
           for (i = 0; i < charLength; i++) {
               let character = Math.floor(Math.random() * lowerCase.length);
               Password += lowerCase.charAt(character, character + 1);
           }
       }
+      //user want only uppercase for password
       else if ((genCharacter === false) && (genNumeric === false) && (genLowerCase === false) && (genUpperCase === true)) {
           for (i = 0; i < charLength; i++) {
               let character = Math.floor(Math.random() * a.length);
@@ -133,7 +137,7 @@ generateBtn.addEventListener("click", function(){
           }
       }
 
-
+      //show result in the webpage
       passwordText.textContent = Password;
   }
 });

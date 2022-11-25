@@ -46,4 +46,5 @@
 
 ---
 
-Deployment: 
+Deployment: https://donglee0415.github.io/What-is-the-magic-word/
+

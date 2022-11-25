@@ -46,5 +46,4 @@
 
 ---
 
-Deployment: http://parkerlacey.github.io/project-2/
-Heroku Deployment:  https://intense-plateau-61191.herokuapp.com/
+Deployment: 
